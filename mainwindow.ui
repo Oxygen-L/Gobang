@@ -6,15 +6,144 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1060</width>
+    <height>760</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1060</width>
+    <height>760</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <property name="iconSize">
+   <size>
+    <width>1130</width>
+    <height>760</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="start">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>420</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 22pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+    </property>
+    <property name="text">
+     <string>开始</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>110</y>
+      <width>191</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="BW">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="select1">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>1. 请选择棋子颜色</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="black_chessman">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>黑子</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="white_chessman">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>白子</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>270</y>
+      <width>191</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="FS">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="select2">
+       <property name="styleSheet">
+        <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>2. 请选择优先权</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="first">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>先手</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="second">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>后手</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1060</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
