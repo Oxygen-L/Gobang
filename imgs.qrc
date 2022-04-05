@@ -4,5 +4,8 @@
         <file>imgs/black.png</file>
         <file>imgs/white.png</file>
         <file>imgs/icon.png</file>
+        <file>imgs/cur_chessman.png</file>
+        <file>imgs/last_chessman.png</file>
+        <file>imgs/win_chessman.png</file>
     </qresource>
 </RCC>
