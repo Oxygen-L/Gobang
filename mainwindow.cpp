@@ -154,8 +154,13 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
     pos.setX(pos.x()-5);
     pos.setY(pos.y()-5);
     if(event->button() == Qt::LeftButton && pos.x()>0&&pos.y()>0&&pos.x()<750&&pos.y()<750 && my_turn==true){
-        last_chessman_pos.setX(pos.x()/50);
-        last_chessman_pos.setY(pos.y()/50);
+        QPoint tmp;
+        tmp.setX(pos.x()/50);
+        tmp.setY(pos.y()/50);
+        if(map[tmp.x()][tmp.y()] != 0){
+            return;
+        }
+        last_chessman_pos = tmp;
         place_chessman(last_chessman_pos,my_color);
         if(check(my_color)){
             i_win = true;
