@@ -36,16 +36,16 @@
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>110</y>
+      <y>50</y>
       <width>191</width>
-      <height>111</height>
+      <height>115</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="BW">
      <item alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="select1">
        <property name="styleSheet">
-        <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+        <string notr="true">font: 15pt &quot;微软雅黑&quot;;
 color: rgb(109, 109, 109);</string>
        </property>
        <property name="text">
@@ -81,16 +81,16 @@ color: rgb(109, 109, 109);</string>
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>280</y>
+      <y>200</y>
       <width>191</width>
-      <height>111</height>
+      <height>115</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="FS">
      <item alignment="Qt::AlignHCenter">
       <widget class="QLabel" name="select2">
        <property name="styleSheet">
-        <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+        <string notr="true">font: 15pt &quot;微软雅黑&quot;;
 color: rgb(109, 109, 109);</string>
        </property>
        <property name="text">
@@ -126,20 +126,20 @@ color: rgb(109, 109, 109);</string>
     <property name="geometry">
      <rect>
       <x>810</x>
-      <y>450</y>
+      <y>580</y>
       <width>191</width>
       <height>101</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="SR">
      <item alignment="Qt::AlignHCenter">
-      <widget class="QLabel" name="select3">
+      <widget class="QLabel" name="select4">
        <property name="styleSheet">
-        <string notr="true">font: 14pt &quot;微软雅黑&quot;;
+        <string notr="true">font: 15pt &quot;微软雅黑&quot;;
 color: rgb(109, 109, 109);</string>
        </property>
        <property name="text">
-        <string>3. 开始或重玩</string>
+        <string>4. 开始或重玩</string>
        </property>
       </widget>
      </item>
@@ -156,6 +156,73 @@ color: rgb(109, 109, 109);</string>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>350</y>
+      <width>191</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QLabel" name="select3">
+       <property name="styleSheet">
+        <string notr="true">font: 15pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>3. 请选择游戏难度</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="diff1">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>简单</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="diff2">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>普通</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="diff3">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>困难</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignHCenter">
+      <widget class="QRadioButton" name="diff4">
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;微软雅黑&quot;;
+color: rgb(109, 109, 109);</string>
+       </property>
+       <property name="text">
+        <string>地狱</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -163,11 +230,29 @@ color: rgb(109, 109, 109);</string>
      <x>0</x>
      <y>0</y>
      <width>1060</width>
-     <height>25</height>
+     <height>24</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>导入导出</string>
+    </property>
+    <addaction name="import_chess"/>
+    <addaction name="export_chess"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="import_chess">
+   <property name="text">
+    <string>导入棋局</string>
+   </property>
+  </action>
+  <action name="export_chess">
+   <property name="text">
+    <string>导出棋局</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

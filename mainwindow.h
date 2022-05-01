@@ -6,6 +6,8 @@
 #include <QMouseEvent>
 #include <QPoint>
 #include <QMessageBox>
+#include <QFileDialog>
+#include <QDebug>
 #include "gobangai.h"
 
 #define CRA(X, Y, Width, Height) (event->x() >= (X) && event->x() <= (X) + (Width) &&  event->y() >= (Y) && event->y() <= (Y) + (Height))
@@ -36,6 +38,8 @@ public:
     void mouseMoveEvent(QMouseEvent *);
     void mousePressEvent(QMouseEvent *);
 
+    void out_chessboard();
+
     ~MainWindow();
 
 private slots:
@@ -49,14 +53,28 @@ private slots:
 
     void on_second_clicked();
 
+    void on_diff1_clicked();
+
+    void on_diff2_clicked();
+
+    void on_diff3_clicked();
+
+    void on_diff4_clicked();
+
+    void on_export_chess_triggered();
+
+    void on_import_chess_triggered();
+
 private:
     Ui::MainWindow *ui;
     int Width = 1060;
     int Height = 760;
 
-    int map[15][15];
+    int map[16][16];
 
     int BoW=0, FoS=0;
+
+    int difficulty=0;
 
     int my_color, robot_color;
 
