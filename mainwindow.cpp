@@ -120,7 +120,7 @@ int MainWindow::check(int COL)
     }
     if(sum_chessman == 15*15){
         draw = 1;
-        return 1;
+        return 2;
     }
     return 0;
 }
@@ -170,14 +170,14 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
         }
         last_chessman_pos = tmp;
         place_chessman(last_chessman_pos,my_color);
-        if(check(my_color)){
+        if(check(my_color)==1){
             i_win = true;
             QMessageBox::information(this, "游戏结束", "恭喜你，你赢了！");
             this->close();
         }
         my_turn = !my_turn;
         robot_place();
-        if(check(robot_color)&&(!i_win)){
+        if((check(robot_color)==1)&&(!i_win)){
             robot_win = true;
             QMessageBox::information(this, "游戏结束", "你输了！");
             this->close();
@@ -378,7 +378,7 @@ void MainWindow::on_import_chess_triggered()
                 line.remove(' ');
                 line.remove(',');
                 for(int j=0;j<15;++j){
-                    map[i][j] = (line[j].digitValue()==0?0:(line[j].digitValue()==1?BLACK:WHITE));
+                    map[i][j] = (line[j].digitValue()==0?0:(line[j].digitValue()==1?WHITE:BLACK));
                 }
             }
             break;
