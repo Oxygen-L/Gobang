@@ -118,7 +118,7 @@ int gobangAI::MINMAX(int depth, int alpha, int beta)
     if(END(e_color)){
         return (-(1<<30)+depth*10);
     }
-    if(depth == ((dif==3)?4:4)){
+    if(depth == ((dif==3)?4:5)){
         calc_f((depth%2)==1?my_color:my_color);
         return f_v;
     }
@@ -140,7 +140,7 @@ int gobangAI::MINMAX(int depth, int alpha, int beta)
     std::sort(vi.begin(),vi.end(),cmp);
 
     if(depth%2==1){
-        for(int i=0;i<qMin(vi.size(),(dif==3)?27:57);++i){
+        for(int i=0;i<qMin(vi.size(),(dif==3)?47:25);++i){
             place(vi[i].poi,(depth%2)==1?my_color:e_color);
             int t_val=MINMAX(depth+1,alpha,beta);
             place(vi[i].poi,0);
@@ -154,7 +154,7 @@ int gobangAI::MINMAX(int depth, int alpha, int beta)
         }
         return alpha;
     }else{
-        for(int i=0;i<qMin(vi.size(),(dif==3)?27:57);++i){
+        for(int i=0;i<qMin(vi.size(),(dif==3)?47:25);++i){
             place(vi[i].poi,(depth%2)==1?my_color:e_color);
             int t_val=MINMAX(depth+1,alpha,beta);
             place(vi[i].poi,0);
