@@ -23,47 +23,47 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
 
-    void paintEvent(QPaintEvent*);
-    void PaintChessboard(QPainter&);
-    void PaintLastChessman(QPainter&);
-    void PaintCurChessman(QPainter&);
-    void PaintWinCase(QPainter&);
+    void paintEvent(QPaintEvent*);      //绘图函数
+    void PaintChessboard(QPainter&);    //绘制棋盘以及棋子
+    void PaintLastChessman(QPainter&);  //绘制上个棋子的位置
+    void PaintCurChessman(QPainter&);   //绘制当前鼠标所在棋盘中的位置
+    void PaintWinCase(QPainter&);       //绘制胜者五子
 
-    void init();
+    void init();                        //初始化函数
 
-    int check(int);
-    void robot_place();
-    void place_chessman(QPoint, int);
+    int check(int);                     //判断棋局是否结束（胜，负，平）
+    void robot_place();                 //机器下棋
+    void place_chessman(QPoint, int);   //将某棋子下在某点处
 
-    void mouseMoveEvent(QMouseEvent *);
-    void mousePressEvent(QMouseEvent *);
+    void mouseMoveEvent(QMouseEvent *); //鼠标移动事件
+    void mousePressEvent(QMouseEvent *);//鼠标点击事件
 
     void out_chessboard();
 
     ~MainWindow();
 
 private slots:
-    void on_start_clicked();
+    void on_start_clicked();            //游戏开始
 
-    void on_black_chessman_clicked();
+    void on_black_chessman_clicked();   //选择黑色棋子
 
-    void on_white_chessman_clicked();
+    void on_white_chessman_clicked();   //选择白色棋子
 
-    void on_first_clicked();
+    void on_first_clicked();            //选择先手
 
-    void on_second_clicked();
+    void on_second_clicked();           //选择后手
 
-    void on_diff1_clicked();
+    void on_diff1_clicked();            //选择游戏难度为“简单”
 
-    void on_diff2_clicked();
+    void on_diff2_clicked();            //选择游戏难度为“普通”
 
-    void on_diff3_clicked();
+    void on_diff3_clicked();            //选择游戏难度为“困难”
 
-    void on_diff4_clicked();
+    void on_diff4_clicked();            //选择游戏难度为“地狱”
 
-    void on_export_chess_triggered();
+    void on_export_chess_triggered();   //导出棋局
 
-    void on_import_chess_triggered();
+    void on_import_chess_triggered();   //导入棋局
 
 private:
     Ui::MainWindow *ui;
